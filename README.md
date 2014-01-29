@@ -1,9 +1,21 @@
+# Update (1/29/14) @arthurblake
+
+This fork was created mainly to fix some critical bugs in the interim while waiting
+for  Corey's major rewrite to be completed; most notably the the service process
+restart feature did not work at all (central to the premise of this module!),
+and also to add some urgently needed features. The main new features added are:
+
+- support for service logon credentials
+- process now starts in the current working directory of the install program by default (or the working directory of the service process can be specified now.)
+- winsw updated to latest version
+- winsw XML is now cleanly generated in a more readable format (and XML content values are properly escaped as well)
+
 # Update (11/10/13)
 
 **tl;dr - Updates in progress.**
 
 I intended to make a lot of updates in the last few weeks. As I dove into code on all three modules, I saw a need to
-refactor the code and abstract the wrapper into its own reusable module. I have completed most of this and am currently 
+refactor the code and abstract the wrapper into its own reusable module. I have completed most of this and am currently
 writing a test suite for that module. It should provide a more robust experience across all operating systems.
 
 [![NPM version](https://badge.fury.io/js/node-windows.png)](http://badge.fury.io/js/node-windows)
@@ -49,7 +61,7 @@ Then, in your project root, run:
 
 `npm link node-windows`
 
-However; it is possible to use node-windows without the global flag (i.e. install directly into the project root). 
+However; it is possible to use node-windows without the global flag (i.e. install directly into the project root).
 More details regarding why this is not the recommended approach are available throughout this Readme.
 
 ## NO NATIVE MODULES
