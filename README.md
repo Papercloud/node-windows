@@ -7,8 +7,8 @@ and also to add some urgently needed features. The main new features added are:
 
 - support for service logon credentials
 - process now starts in the current working directory of the install program by default (or the working directory of the service process can be specified now.)
-- winsw updated to latest version
-- winsw XML is now cleanly generated in a more readable format (and XML content values are properly escaped as well)
+- WINSW updated to latest version (1.14)
+- WINSW XML is now cleanly generated in a more readable format (and XML content values are properly escaped as well)
 
 # Update (11/10/13)
 
