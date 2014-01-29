@@ -1,14 +1,16 @@
-# Update (1/29/14) @arthurblake
+# Reason for arthurblake/node-windows fork
 
 This fork was created mainly to fix some critical bugs in the interim while waiting
-for  Corey's major rewrite to be completed; most notably the the service process
+for Corey's major rewrite to be completed (see his notes below); most notably the the service process
 restart feature did not work at all (central to the premise of this module!),
 and also to add some urgently needed features. The main new features added are:
 
-- support for service logon credentials
-- process now starts in the current working directory of the install program by default (or the working directory of the service process can be specified now.)
-- WINSW updated to latest version (1.14)
-- WINSW XML is now cleanly generated in a more readable format (and XML content values are properly escaped as well)
+- Support for service logon credentials.
+- Service process now starts in the current working directory of the install program by default (or the working directory of the service process can be specified now.)
+- WINSW updated to latest version (1.14.)
+- WINSW XML is now cleanly generated in a more readable format (and XML content values are properly escaped as well.)
+
+1/29/14 Arthur Blake [Twitter (@arthurblake)](http://twitter.com/arthurblake)
 
 # Update (11/10/13)
 
