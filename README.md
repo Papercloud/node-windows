@@ -163,8 +163,38 @@ var svc = new Service({
 
 ### User Account Attributes
 
-If you need to specify a specific user or particular credentials to manage a service, the following
-attributes may be helpful.
+If you need to specify the credentials that the service should run under, the following attributes may be helpful.
+
+The `logOnAs` attribute is an object with three keys:  `domain`,`account`, and `password`.
+This can be used to identify which user the installed service should run under.
+If nothing is specified here, (or either account or password are not fully specified),'
+the service will run under the `Local System` account.
+
+If specifying these credentials and no domain is specified, then the domain will default
+to the local computer name, but it can be overridden with an Active Directory
+or LDAP domain. For example:
+
+**app.js**
+```js
+var Service = require('node-windows').Service;
+
+// Create a new service object
+var svc = new Service({
+  name:'Hello World',
+  script: require('path').join(__dirname,'helloworld.js')
+});
+
+svc.logOnAs.domain = 'mydomain.local';
+svc.logOnAs.account = 'username';
+svc.logOnAs.password = 'password';
+...
+```
+
+Please note that at the moment, the credentials specified in this manner will be stored in plain
+text in the WINSW XML file that is generated when installing the service.
+
+If you need to specify a specific user or particular credentials to use when
+managing the service (install or uninstall), the following attributes may be helpful.
 
 The `user` attribute is an object with three keys: `domain`,`account`, and `password`.
 This can be used to identify which user the service library should use to perform system commands.
@@ -191,7 +221,7 @@ Both the account and password must be explicitly defined if you want the service
 run commands as a specific user. By default, it will run using the user account that launched
 the process (i.e. who launched `node app.js`).
 
-The other attribute is `sudo`. This attribute has a single property called `password`. By supplying
+The final attribute is `sudo`. This attribute has a single property called `password`. By supplying
 this, the service module will attempt to run commands using the user account that launched the
 process and the password for that account. This should only be used for accounts with administrative
 privileges.
@@ -234,6 +264,26 @@ svc.uninstall();
 ```
 
 The uninstall process only removes process-specific files. **It does NOT delete your Node.js script!**
+
+### Service working directory
+
+By default, when installing a service, the working directory will be set to
+the same working directory that the install process is running under.
+To override this, use the `workingdirectory` setting. For example:
+
+```js
+var Service = require('node-windows').Service;
+
+// Create a new service object
+var svc = new Service({
+  name:'Hello World',
+  script: require('path').join(__dirname,'helloworld.js')
+});
+
+svc.workingdirectory = "C:\\my\\explicitly\\defined\\directory\\"
+// Install the service.
+svc.install();
+```
 
 ### What Makes node-windows Services Unique?
 
