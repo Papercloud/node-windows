@@ -167,7 +167,7 @@ If you need to specify the credentials that the service should run under, the fo
 
 The `logOnAs` attribute is an object with three keys:  `domain`,`account`, and `password`.
 This can be used to identify which user the installed service should run under.
-If nothing is specified here, (or either account or password are not fully specified),'
+If nothing is specified here, (or either account or password are not fully specified) then
 the service will run under the `Local System` account.
 
 If specifying these credentials and no domain is specified, then the domain will default
@@ -267,9 +267,10 @@ The uninstall process only removes process-specific files. **It does NOT delete 
 
 ### Service working directory
 
-By default, when installing a service, the working directory will be set to
-the same working directory that the install process is running under.
-To override this, use the `workingdirectory` setting. For example:
+By default, the working directory that the service will run under will be set to
+the same working directory that the install process is running under when the
+service is installed.
+To override this and set the service working directory explicitly, use the `workingdirectory` setting. For example:
 
 ```js
 var Service = require('node-windows').Service;
