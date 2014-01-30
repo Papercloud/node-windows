@@ -23,7 +23,7 @@
   "preferGlobal": true,
   "dependencies": {
     "optimist": "~0.6.0",
-    "xml": "*"
+    "xml": "0.0.12"
   },
   "readmeFilename": "README.md",
   "scripts": {},
