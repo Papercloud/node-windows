@@ -1,8 +1,8 @@
 # Reason for this fork
 
 This fork was created mainly to fix some critical bugs in the interim while waiting
-for Corey's major rewrite to be completed (see his notes below); most notably the the service process
-restart feature did not work at all (central to the premise of this module!),
+for Corey's major rewrite to be completed (see his notes below); most notably the
+service process restart feature did not work at all (central to the premise of this module!),
 and also to add some urgently needed features. The main new features added are:
 
 - Support for service logon credentials.
@@ -10,6 +10,8 @@ and also to add some urgently needed features. The main new features added are:
 - WINSW updated to latest version (1.14.)
 - WINSW XML is now cleanly generated in a more readable format (and XML content values are properly escaped as well.)
 - Show basic statistics in event log when the service has to be restarted after an unhandled exception or unexpected exit.
+
+Arthur Blake [Twitter (@arthurblake)](http://twitter.com/arthurblake)
 
 ##How to install this fork
 
@@ -30,8 +32,6 @@ movement of your project files would require a re-installation of your service n
 what, because WINSW determines the full path to where your server files are when
 the service is installed and that is hard coded into the XML until you uninstall and
 reinstall the service.)
-
-Arthur Blake [Twitter (@arthurblake)](http://twitter.com/arthurblake)
 
 # Update (11/10/13)
 
