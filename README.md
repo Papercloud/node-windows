@@ -12,6 +12,19 @@ and also to add some urgently needed features. The main new features added are:
 
 1/29/14 Arthur Blake [Twitter (@arthurblake)](http://twitter.com/arthurblake)
 
+To install this fork into your project from npm, ignore the installation
+instructions below, and first clone the git repo to a folder somewhere:
+
+`git clone https://github.com/arthurblake/node-windows.git c:\temp\node-windows`
+
+Then from your project root,
+
+`npm install c:\temp\node-windows`
+
+You may desire to install it globally using the npm -g flag as Corey suggests,
+but I prefer to install in the project root so that all project dependencies are in the
+same place (and simply not move the files around around after installing a service.)
+
 # Update (11/10/13)
 
 **tl;dr - Updates in progress.**
