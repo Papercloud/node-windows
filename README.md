@@ -23,7 +23,12 @@ Then from your project root,
 
 You may desire to install it globally using the npm -g flag as Corey suggests,
 but I prefer to install in the project root so that all project dependencies are in the
-same place (and simply not move the files around around after installing a service.)
+same place (and simply not move the files around around after installing a service.
+The recommended reason to install globally doesn't make sense to me because
+movement of your project files would require a re-installation of your service no matter
+what, because WINSW determines the full path to where your server files are when
+the service is installed and that is hard coded into the XML until you uninstall and
+reinstall the service.)
 
 # Update (11/10/13)
 
