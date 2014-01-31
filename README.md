@@ -11,7 +11,7 @@ and also to add some urgently needed features. The main new features added are:
 - WINSW XML is now cleanly generated in a more readable format (and XML content values are properly escaped as well.)
 - Show basic statistics in event log when the service has to be restarted after an unhandled exception or unexpected exit.
 
-1/29/14 Arthur Blake [Twitter (@arthurblake)](http://twitter.com/arthurblake)
+##How to install this fork
 
 To install this fork into your project from npm, ignore the installation
 instructions below, and first clone the git repo to a folder somewhere:
@@ -30,6 +30,8 @@ movement of your project files would require a re-installation of your service n
 what, because WINSW determines the full path to where your server files are when
 the service is installed and that is hard coded into the XML until you uninstall and
 reinstall the service.)
+
+Arthur Blake [Twitter (@arthurblake)](http://twitter.com/arthurblake)
 
 # Update (11/10/13)
 
