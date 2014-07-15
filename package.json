@@ -17,9 +17,6 @@
   "author": "Arthur Blake <arthur.blake@gmail.com>",
   "devDependencies": {},
   "main": "lib/node-windows.js",
-  "os": [
-    "win32"
-  ],
   "preferGlobal": false,
   "dependencies": {
     "optimist": "~0.6.0",
