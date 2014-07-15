@@ -1,3 +1,10 @@
+# Reason for this fork * 2
+
+This fork is to change "workingdirectory" to "cwd", to keep up with the defaults on node-mac/node-linux.
+Thank you Arthus Blake for that addition, but I think that using the same for the three services is more adequate.
+
+Alan Sikora
+
 # Reason for this fork
 
 This fork was created mainly to fix some critical bugs in the interim while waiting
@@ -293,7 +300,7 @@ The uninstall process only removes process-specific files. **It does NOT delete 
 By default, the working directory that the service will run under will be set to
 the same working directory that the install process is running under when the
 service is installed.
-To override this and set the service working directory explicitly, use the `workingdirectory` setting. For example:
+To override this and set the service working directory explicitly, use the `cwd` setting. For example:
 
 ```js
 var Service = require('node-windows').Service;
@@ -301,10 +308,10 @@ var Service = require('node-windows').Service;
 // Create a new service object
 var svc = new Service({
   name:'Hello World',
+  cwd:"C:\\my\\explicitly\\defined\\directory\\",
   script: require('path').join(__dirname,'helloworld.js')
 });
 
-svc.workingdirectory = "C:\\my\\explicitly\\defined\\directory\\"
 // Install the service.
 svc.install();
 ```
