@@ -1,6 +1,6 @@
 {
   "name": "node-windows",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Support for Windows services, event logging, UAC, and several helper methods for interacting with the OS.",
   "keywords": [
     "winsw",
@@ -14,7 +14,7 @@
     "sudo",
     "task"
   ],
-  "author": "Arthur Blake <arthur.blake@gmail.com>",
+  "author": ["Alan Sikora <alansikora@gmail.com>", "Arthur Blake <arthur.blake@gmail.com>"],
   "devDependencies": {},
   "main": "lib/node-windows.js",
   "preferGlobal": false,
